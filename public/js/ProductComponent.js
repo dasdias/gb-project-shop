@@ -13,10 +13,10 @@ Vue.component('product', {
     <div class="featured-card__item">
       <div class="featured-card__wrap-img">
         <div class="featured-card__img">
-          <img :src="img" :alt="product.product_name" />
+          <img :src="product.img" :alt="product.product_name" />
         </div>
         <div class="featured-card__cover">
-          <a href="#" class="featured-card__btn" @click="$parent.$emit('add-product', product)">
+          <a href="#" class="featured-card__btn" @click.prevent="$parent.$emit('add-product', product)">
             <img :src="icon" alt="cart" />
             Add to Cart
           </a>
@@ -25,9 +25,9 @@ Vue.component('product', {
       <div class="featured-card__body">
         <div class="featured-card__title">{{product.product_name}}</div>
         <div class="featured-card__desc">
-          Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
+          {{product.product_desc}}
         </div>
-        <div class="featured-card__price">{{product.price}}</div>
+        <div class="featured-card__price">{{product.price}} ₽</div>
       </div>
     </div>
   `,
