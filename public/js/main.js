@@ -66,7 +66,8 @@ const app = new Vue({
       })
         .then((result) => result.json())
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
+          this.$refs.errorconnect.setParam.set(true);
         });
     },
     addProduct(item) {
@@ -108,17 +109,6 @@ const app = new Vue({
           this.totalQuantity();
         });
       }
-
-      // this.getJson(`${API}/addToBasket.json`).then((data) => {
-      //   if (data.result === 1) {
-      //     if (item.quantity > 1) {
-      //       item.quantity--;
-      //     } else {
-      //       this.cartItems.splice(this.cartItems.indexOf(item), 1);
-      //     }
-      //   }
-      //   this.totalQuantity();
-      // });
     },
     filter() {
       let regexp = new RegExp(this.userSearch, 'i');

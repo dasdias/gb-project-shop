@@ -5,6 +5,12 @@ const errorconnect = {
       text: '',
     };
   },
+  // method: {
+  //   setParam() {
+  //     // this.error = err;
+  //     this.$data.error = true;
+  //   },
+  // },
   template: `
     <div class="modal-error modal-error__cover" @click="error = !error" v-show="error">
       <div class="modal-error__body" @click.stop>

@@ -1,5 +1,30 @@
 {
     "amount": 46600,
     "countGoods": 2,
-    "contents": []
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": 124,
+            "img": "images/card/card-1.jpg",
+            "product_name": "Куртка",
+            "product_desc": "Материал наполнителя: Полиэфирное волокно; Коллекция: Осень-зима 2021",
+            "price": 2716
+        },
+        {
+            "quantity": 2,
+            "id_product": 123,
+            "img": "images/card/card-3.jpg",
+            "product_desc": "Материал: Хлопок, Полиэстер; Стиль: Домашний, Классический, Повседневный, Спортивный; Тип: Толстовка, Свитшот, Худи;",
+            "product_name": "Толстовка",
+            "price": 320
+        },
+        {
+            "quantity": 1,
+            "id_product": 457,
+            "img": "images/card/card-2.jpg",
+            "product_desc": "Материал: Футер трехнитка; Коллекция: Базовая коллекция;  Рост: 160-176",
+            "product_name": "Костюм женский",
+            "price": 1710
+        }
+    ]
 }
