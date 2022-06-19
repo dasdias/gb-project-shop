@@ -23,9 +23,7 @@ const app = new Vue({
       return fetch(url)
         .then((result) => result.json())
         .catch((err) => {
-          $refs.errorconnect.error = true;
-          this.$refs.errorconnect.text = err;
-          console.log(this.$refs.errorconnect.error);
+          this.$refs.errorconnect.setParam(err);
         });
     },
     postJson(url, data) {
@@ -39,7 +37,8 @@ const app = new Vue({
         .then((result) => result.json())
         .catch((error) => {
           // console.log(error)
-          this.$refs.error.text = error;
+          // this.$refs.error.text = error;
+          this.$refs.errorconnect.setParam(error);
         });
     },
     putJson(url, data) {
@@ -53,7 +52,8 @@ const app = new Vue({
         .then((result) => result.json())
         .catch((error) => {
           // console.log(error)
-          this.$refs.error.text = error;
+          // this.$refs.error.text = error;
+          this.$refs.errorconnect.setParam(error);
         });
     },
     delJson(url, data) {
@@ -67,7 +67,8 @@ const app = new Vue({
         .then((result) => result.json())
         .catch((error) => {
           // console.log(error);
-          this.$refs.errorconnect.setParam.set(true);
+          this.$refs.errorconnect.error = true;
+          this.$refs.errorconnect.setParam(error);
         });
     },
     addProduct(item) {
